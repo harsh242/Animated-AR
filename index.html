@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Example Page</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        model-viewer {
+            min-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <model-viewer src="untitled.glb" alt="A 3D model of an astronaut" ar ar-modes="webxr scene-viewer quick-look"
+        placement="floor" environment-image="neutral" auto-rotate camera-controls></model-viewer>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAX9wXfKrDmdkVATgubgmt_BBEou0RyCdA",
+      authDomain: "ar-example-66b15.firebaseapp.com",
+      projectId: "ar-example-66b15",
+      storageBucket: "ar-example-66b15.appspot.com",
+      messagingSenderId: "881236052149",
+      appId: "1:881236052149:web:6abffc94ec7963436f56fc",
+      measurementId: "G-V5KWW739YH"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+</html>
